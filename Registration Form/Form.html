@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="styles.css" type="text/css" rel="stylesheet"/>
+<meta charset="utf-8">
+<title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <p> Please fill out this form with the required information </p>
+    <form action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+            <label>Enter Your First Name: <input name="name" type="text" required></label>
+            <label>Enter Your Last Name: <input name="lastn" type="text" required></label>
+            <label>Enter Your Email: <input name="email" type="email" required></label>
+            <label>Create a New Password: <input name="password" type="password" required pattern="[a-z0-5]{8,}"></label>
+        </fieldset>
+        <fieldset>
+            <label><input class="inline" type="radio" name="account-type"/> Personal Account</label>
+            <label><input class="inline" type="radio" name="account-type"/> Business Account</label>
+            <label><input class="inline" name="check?" type="checkbox" required/> I accept the <a target="_blank" href="https://www.freecodecamp.org/news/terms-of-service/"> terms and conditions</a></label>
+        </fieldset>
+        <label>Upload a profile picture <input name="file" type="file"/></label>
+        <label>Input your age (years):<input name="number" type="number" max="120" min="13"/></label>
+        <label>How did you hear about us?
+        <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+        </select>
+        </label>
+        <label>Provide a bio:<textarea style="resize: none;" name="bio" placeholder="type something creative please" rows="3" cols="30"></textarea></label>
+        <input name="submit" type="submit" value="Submit">
+    </form>
+    <footer class="footer"><p class="footerp">Created by Mücahit KUK</p></footer>
+</body>
+</html>
