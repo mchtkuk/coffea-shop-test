@@ -150,4 +150,156 @@
   <br>
   <br> 
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <title>React Documentation</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header class="navheader">
+    <h1>React Documentation</h1>
+    <li>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#What_Are_We_Building?">What Are We Building?</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#Prerequisites">Prerequisites</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#What_Is_React?">What Is React?</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#Inspecting_the_Starter_Code">Inspecting the Starter Code</a>
+    </li>
+    <li>
+    <a class="nav-link" style="padding: 26px 19px;" href="#Making_an_Interactive_Component">Making an Interactive Component</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#Developer_Tools">Developer Tools</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#Wrapping_Up">Wrapping Up</a>
+    </li>
+    <li>
+    <a class="nav-link" href="#Reference">Reference</a>
+    </li> 
+  </nav>
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+        <p>We will build a small game during this tutorial.</p>
+        <p>The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.</p>
+        <p>The tutorial is divided into several sections:</p>
+        <li>Overview will teach you the fundamentals of React: components, props, and state.</li>
+        <li>Adding Time Travel will give you a deeper insight into the unique strengths of React.</li>
+    </section>
+    <section class="main-section" id="What_Are_We_Building?">
+      <header>What Are We Building?</header>
+        <p>In this tutorial, we’ll show how to build an interactive tic-tac-toe game with React.</p>
+        <p>One of the features that you’ll notice is that there is a numbered list to the right of the game’s board.</p>
+        <p>This list gives you a history of all of the moves that have occurred in the game, and it is updated as the game progresses.</p>
+        <li>You can close the tic-tac-toe game once you’re familiar with it.</li>
+        <li>We’ll be starting from a simpler template in this tutorial.</li>
+    </section>
+    <section class="main-section" id="Prerequisites">
+      <header>Prerequisites</header>
+        <p>We’ll assume that you have some familiarity with HTML and JavaScript, but you should be able to follow along even if you’re coming from a different programming language.</p>
+        <p>We’ll also assume that you’re familiar with programming concepts like functions, objects, arrays, and to a lesser extent, classes.</p>
+        <li>If you need to review JavaScript, we recommend reading this guide.</li>
+        <li>Note that we’re also using some features from ES6 — a recent version of JavaScript.</li>
+    </section>
+    <section class="main-section" id="What_Is_React?">
+      <header>What Is React?</header>
+        <p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.</p>
+        <p>React has a few different kinds of components, but we’ll start with React.Component subclasses:</p>
+        <li>We’ll get to the funny XML-like tags soon. We use components to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.</li>
+    </section>
+    <section class="main-section" id="Inspecting_the_Starter_Code">
+      <header>Inspecting the Starter Code</header>
+        <p>If you’re going to work on the tutorial in your browser, open this code in a new tab: Starter Code.</p>
+        <p>This Starter Code is the base of what we’re building. We’ve provided the CSS styling so that you only need to focus on learning React and programming the tic-tac-toe game.</p><pre>
+        <code>class Board extends React.Component {
+            renderSquare(i) {
+              return <Square value={i} />;
+            }
+          }</code></pre><pre>
+        <code>class Square extends React.Component {
+            render() {
+              return (
+                button className="square">
+                  {this.props.value}
+                button>
+              );
+            }
+          }</code></pre>
+        <li>We strongly recommend typing code by hand as you’re working through the tutorial and not using copy/paste. This will help you develop muscle memory and a stronger understanding.</li>
+    </section>
+    <section class="main-section" id="Making_an_Interactive_Component">
+      <header>Making an Interactive Component</header>
+        <p>Let’s fill the Square component with an “X” when we click it. First, change the button tag that is returned from the Square component’s render() function to this:</p>
+        <p>As a next step, we want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.</p>
+        <pre>
+        <code>class Square extends React.Component {
+            render() {
+              return (
+                button className="square" onClick={() => console.log('click')}>
+                  {this.props.value}
+                /button>
+              );
+            }
+           }</code>
+        </pre><pre>
+        <code>class Square extends React.Component {
+            constructor(props) {
+              super(props);
+              this.state = {
+                value: null,
+              };
+            }</code></pre>
+            <pre>
+        <code>render() {
+            return (
+              button className="square" onClick={() => console.log('click')}>
+                {this.props.value}
+              </button>
+            );
+          }
+        }</code></pre>
+        <li>In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.</li>
+    </section>
+    <section class="main-section" id="Developer_Tools">
+      <header>Developer Tools</header>
+        <p>The React Devtools extension for Chrome and Firefox lets you inspect a React component tree with your browser’s developer tools.</p>
+        <p>After installing React DevTools, you can right-click on any element on the page, click “Inspect” to open the developer tools, and the React tabs (“⚛️ Components” and “⚛️ Profiler”) will appear as the last tabs to the right. Use “⚛️ Components” to inspect the component tree.</p>
+        <p>However, note there are a few extra steps to get it working with CodePen:</p>
+        <li>Log in or register and confirm your email (required to prevent spam).Click the “Fork” button.</li>
+        <li>Click “Change View” and then choose “Debug mode”.In the new tab that opens, the devtools should now have a React tab.</li>
+    </section>
+    <section class="main-section" id="Wrapping_Up">
+      <header>Wrapping Up</header>
+        <p>Nice work! We hope you now feel like you have a decent grasp of how React works.</p>
+        <p>If you have extra time or want to practice your new React skills, here are some ideas for improvements that you could make to the tic-tac-toe game which are listed in order of increasing difficulty:</p>
+        <p>Throughout this tutorial, we touched on React concepts including elements, components, props, and state. For a more detailed explanation of each of these topics, check out the rest of the documentation. To learn more about defining components, check out the React.Component API reference.</p>
+    </section>
+    <section class="main-section" id="Reference">
+     <header>Reference</header>
+     <br>
+     <li>All the documentation in this page is taken from<a target="_blank" href="https://en.reactjs.org/tutorial/tutorial.html#inspecting-the-starter-code" style="text-decoration: none;"> Reactjs.org</a></li>
+    </section>
+  </main>
+  <br>
+  <br>
+  <footer style="text-align: center"><i>Created by</i> Mücahit KUK</footer>
+  <a target="_blank" style="text-align: center;" href="https://github.com/mchtkuk"><p>Github</p></a>
+  <br>
+  <br>
+  <br> 
+</body>
 </html>
