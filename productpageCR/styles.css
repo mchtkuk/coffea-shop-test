@@ -113,22 +113,17 @@ body {
     justify-content: center;
     width: 25%;
     
-
-    
-    
-    
 }
 
 .product1 h3 {
     font-family: 'Courier New', Courier, monospace;
-    background-color: aqua;
+    background-color: #efefef;
     margin-top: 0;
-    
 }
 
 .product2 h3 {
     font-family: 'Courier New', Courier, monospace;
-    background-color: aqua;
+    background-color: #efefef;
     margin-top: 0;
 }
 .product2 {
@@ -143,7 +138,7 @@ body {
 
 .product3 h3 {
     font-family: 'Courier New', Courier, monospace;
-    background-color: aqua;
+    background-color: #efefef;
     margin-top: 0;
     
 }
@@ -154,6 +149,11 @@ body {
     border-style: groove;
     width: 25%;
 
+}
+
+.cost {
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 
@@ -177,3 +177,25 @@ footer a {
 ul {
     padding: 0;
 }
+
+#select {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#select:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference){
+    *{
+    scroll-behavior: smooth;
+    }
+  }
+    
