@@ -1,0 +1,109 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    left: 0;
+}
+
+* {
+  
+}
+
+header {
+    width: 100%;
+    height: 5%;
+    right: 0;
+    left: 0;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    
+    
+}
+
+ul {
+    top: 15%;
+    position: relative;
+    right: 50px;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    bottom: 20%;
+    padding-right: 4rem; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+
+}
+.nav-border {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: black;
+}
+
+.nav-link {
+    text-decoration: none;
+    text-align: right;
+    color: black;
+    justify-content: space-between;
+    
+
+}
+
+#headimg {
+    position: relative;
+    height: 100px;
+    top: -40px;
+    left: 100px;
+    z-index: 2;
+   }
+
+#nav-bar {
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    top: 0px;
+    
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    margin-bottom: 0;
+    background-color: black;
+}
+
+.welcome1 {
+    display: contents;
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    top: 6.0rem;
+    left: 0;
+}
+
+#video {
+    position: relative;
+    z-index: -1;
+    padding-top: -2;
+    top: -100px
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    top: 500px;
+    color: white;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
