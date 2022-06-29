@@ -136,13 +136,6 @@ h1 {
     border-left: 952px solid transparent;
     border-right: 952px solid transparent;
     border-top: 952px solid white;
-    background: linear-gradient(
-    45deg,
-		rgb(134, 133, 133) 0%,
-		rgb(234, 231, 231) 25%,
-		white 67%
-	);
-}
 
 h2 {
     position: absolute;
