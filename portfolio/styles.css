@@ -153,7 +153,7 @@ h1 {
 
 h2 {
     position: absolute;
-    top: 100px;
+    top: 150px;
     color: black;
     font-style: normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -211,7 +211,7 @@ h3 {
     top: -30px;
 }
 
-.contact-details {
+#profile-link {
     position: relative;
     text-decoration: none;
     color: white;
