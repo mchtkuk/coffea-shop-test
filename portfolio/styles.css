@@ -67,7 +67,7 @@ li {
     z-index: 2;
    }
 
-#nav-bar {
+#navbar {
     text-align: right;
     position: fixed;
     width: 100%;
@@ -135,7 +135,7 @@ h1 {
     animation: 8s anim-lineUp ease-out 1;
 }
 
-.works {
+#projects {
     position: relative;
     width: 100%;
     height: 50%;
@@ -179,7 +179,7 @@ p {
     margin-top: -200px;
 }
 
-.contactme {
+#contactme {
     width: 1920px;
     height: 200px;
 }
@@ -288,5 +288,11 @@ h3 {
     100% {
       opacity: 1;
       transform: translateY(0%);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    *{
+    scroll-behavior: smooth;
     }
   }
